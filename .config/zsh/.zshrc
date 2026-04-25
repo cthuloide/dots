@@ -112,8 +112,8 @@ bindkey -s '^o' '^ulfcd\n'
 
 # ─── Sources ──────────────────────────────────────────────────────────────────
 
-[[ -f ".config/shell/aliasrc" ]]    && source ".config/shell/aliasrc"
-[[ -f ".config/shell/shortcutrc" ]] && source ".config/shell/shortcutrc"
+[[ -f "$HOME/.config/shell/aliasrc" ]]    && source "$HOME.config/shell/aliasrc"
+[[ -f "$HOME/.config/shell/shortcutrc" ]] && source "$HOME/.config/shell/shortcutrc"
 
 
 # ─── Plugins ──────────────────────────────────────────────────────────────────
