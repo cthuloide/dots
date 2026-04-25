@@ -19,7 +19,7 @@ else
 fi
 
 # prefer bat over cat if available
-command -v bat >/dev/null && alias cat='bat --style=plain'
+command -v batcat >/dev/null && alias cat='batcat --style=plain'
 
 # clear
 alias c='clear'
@@ -31,126 +31,9 @@ alias q='exit'
 command -v nvim >/dev/null && alias vim='nvim' vimdiff='nvim -d'
 alias v='nvim'
 
-
-# ─── Git ──────────────────────────────────────────────────────────────────────
-
-alias g='git'
-alias gs='git status'
-alias ga='git add'
-alias gc='git commit'
-alias gp='git push'
-alias gl='git log --oneline --graph --decorate'
-alias gd='git diff'
-
-# dotfiles bare repo
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias cs='config status'
-alias ca='config add'
-alias cc='config commit'
-alias cp='config push'
-
-
 # ─── System ───────────────────────────────────────────────────────────────────
 
 alias update='sudo apt update && sudo apt upgrade'
 alias install='sudo apt install'
 alias remove='sudo apt remove'
 alias search='apt search'
-
-# disk and memory
-alias df='df -h'
-alias du='du -sh'
-alias free='free -h'
-
-# processes
-alias psg='ps aux | grep'
-alias ports='ss -tulanp'
-
-
-# ─── Writing ──────────────────────────────────────────────────────────────────
-
-# pandoc conversions — output format inferred from extension
-alias topdf='pandoc --pdf-engine=xelatex'
-alias todoc='pandoc -o output.docx'
-alias tohtml='pandoc -o output.html'
-
-# word count on markdown (strips frontmatter and markup)
-wc-md() {
-    pandoc --to=plain "$1" | wc -w
-}
-
-# open today's journal entry (creates it if absent)
-jrnl() {
-    local entry="$HOME/writing/journal/$(date +%Y-%m-%d).md"
-    mkdir -p "$(dirname "$entry")"
-    nvim "$entry"
-}
-
-
-# ─── Web Development ──────────────────────────────────────────────────────────
-
-# fnm — fast node manager
-command -v fnm >/dev/null && eval "$(fnm env --use-on-cd)"
-
-# quick local server from current directory
-serve() {
-    local port="${1:-8000}"
-    python3 -m http.server "$port"
-}
-
-# zola shortcuts (adjust if using a different generator)
-alias zs='zola serve'
-alias zb='zola build'
-
-
-# ─── Video / Media ────────────────────────────────────────────────────────────
-
-# suppress ffmpeg banner globally
-alias ffmpeg='ffmpeg -hide_banner'
-alias ffprobe='ffprobe -hide_banner'
-
-# compress video to h264/aac — sane YouTube-upload default
-# usage: vid_compress input.mp4 [output.mp4]
-vid_compress() {
-    local input="$1"
-    local output="${2:-${input%.*}_compressed.mp4}"
-    ffmpeg -i "$input" \
-        -c:v libx264 -crf 18 -preset slow \
-        -c:a aac -b:a 192k \
-        "$output"
-}
-
-# extract audio from video
-# usage: vid_audio input.mp4
-vid_audio() {
-    ffmpeg -i "$1" -vn -c:a copy "${1%.*}.aac"
-}
-
-# trim video without re-encoding
-# usage: vid_trim input.mp4 00:01:00 00:02:30 [output.mp4]
-vid_trim() {
-    local input="$1" start="$2" end="$3"
-    local output="${4:-${input%.*}_trim.mp4}"
-    ffmpeg -i "$input" -ss "$start" -to "$end" -c copy "$output"
-}
-
-# scale video to 1080p
-# usage: vid_scale input.mp4
-vid_scale() {
-    ffmpeg -i "$1" -vf scale=-2:1080 -c:a copy "${1%.*}_1080p.mp4"
-}
-
-
-# ─── Misc ─────────────────────────────────────────────────────────────────────
-
-# quick calculator
-calc() { python3 -c "print($*)" }
-
-# copy file contents to clipboard (COSMIC / Wayland)
-clip() { cat "$1" | wl-copy }
-
-# show path entries one per line
-alias path='echo $PATH | tr ":" "\n"'
-
-# reload shell config
-alias reload='source $ZDOTDIR/.zshrc'
