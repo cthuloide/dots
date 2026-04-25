@@ -3,7 +3,7 @@
 alias h='~/'
 alias d='~/Documents/'
 alias D='~/Downloads/'
-alias d='~/Music/'
+alias m='~/Music/'
 alias p='~/Projects/'
 alias pp='~/Pictures/'
 alias vv='~/Videos/'
