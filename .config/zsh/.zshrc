@@ -123,7 +123,6 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 
 source "$ZDOTDIR/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
-source "$ZDOTDIR/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh"
 source "$ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 # history substring search bindings — must follow plugin source
