@@ -10,12 +10,10 @@ alias vv='~/Videos/'
 alias w='~/Writing/'
 
 alias cf='cd ~/.config/'
-alias cfz='cd ~/.config/zsh/'
-alias cfs='cd ~/.config/shell/'
 
 # ─── Quick config file access ─────────────────────────────────────────────────
 
-alias cfz='nvim ~/.config/.zshrc'
+alias cfz='nvim ~/.config/zsh/.zshrc'
 alias cfa='nvim ~/.config/shell/aliasrc'
 alias cfs='nvim ~/.config/shell/shortcutrc'
 alias cfv='nvim ~/.config/nvim/init.lua'
