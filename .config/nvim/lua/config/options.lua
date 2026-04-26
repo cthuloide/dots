@@ -45,3 +45,5 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.undofile = true
 vim.opt.updatetime = 250
 vim.opt.wildmode = "longest:full,full"
+vim.opt.signcolumn = "yes"
+vim.opt.laststatus = 3
