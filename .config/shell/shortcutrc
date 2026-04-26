@@ -1,20 +1,29 @@
 # ─── Directory shortcuts ───────────────────────────────────────────────────────
 
-alias h='~/'
-alias d='~/Documents/'
-alias D='~/Downloads/'
-alias m='~/Music/'
-alias p='~/Projects/'
-alias pp='~/Pictures/'
-alias vv='~/Videos/'
-alias w='~/Writing/'
+alias h='$HOME/'
+alias d='$HOME/Documents/'
+alias D='$HOME/Downloads/'
+alias m='$HOME/Music/'
+alias p='$HOME/Projects/'
+alias pp='$HOME/Pictures/'
+alias vv='$HOME/Videos/'
+alias w='$HOME/Writing/'
 
-alias cf='cd ~/.config/'
+alias cf='cd $HOME/.config/'
+
 
 # ─── Quick config file access ─────────────────────────────────────────────────
 
-alias cfz='nvim ~/.config/zsh/.zshrc'
-alias cfa='nvim ~/.config/shell/aliasrc'
-alias cfs='nvim ~/.config/shell/shortcutrc'
-alias cfv='nvim ~/.config/nvim/init.lua'
-alias cft='nvim ~/.config/starship.toml'
+# zsh
+alias cfz='nvim $HOME/.config/zsh/.zshrc'
+alias cfa='nvim $HOME/.config/shell/aliasrc'
+alias cfs='nvim $HOME/.config/shell/shortcutrc'
+
+# nvim
+alias cfv='nvim $HOME/.config/nvim/init.lua'
+alias cfvo='nvim $HOME/.config/nvim/lua/config/options.lua'
+alias cfvk='nvim $HOME/.config/nvim/lua/config/keymaps.lua'
+alias cfvp='nvim $HOME/.config/nvim/lua/config/plugins.lua'
+
+# misc
+alias cft='nvim $HOME/.config/starship.toml'
