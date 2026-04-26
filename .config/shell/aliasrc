@@ -6,32 +6,36 @@ alias mv='mv -iv'
 alias rm='rm -vI'
 alias mkdir='mkdir -pv'
 
-# prefer eza over ls if available
-if command -v eza >/dev/null; then
-    alias ls='eza --group-directories-first'
-    alias ll='eza -lh --group-directories-first'
-    alias la='eza -lah --group-directories-first'
-    alias lt='eza --tree --level=2'
-else
-    alias ls='ls --color=auto --group-directories-first'
-    alias ll='ls -lh'
-    alias la='ls -lah'
-fi
+# create directory and enter it
+mkcd() { mkdir -pv "$1" && cd "$1"; }
 
-# prefer bat over cat if available
-command -v batcat >/dev/null && alias cat='batcat --style=plain'
 
-# clear
-alias c='clear'
-alias q='exit'
+# ─── Modern replacements ──────────────────────────────────────────────────────
+
+# eza for ls
+alias ls='eza --group-directories-first'
+alias ll='eza -lh --group-directories-first'
+alias la='eza -lah --group-directories-first'
+alias lt='eza --tree --level=2'
+
+# bat for cat (binary is batcat on Debian/Ubuntu)
+alias cat='batcat --style=plain'
+
+# fd for find (binary is fdfind on Debian/Ubuntu)
+alias fd='fdfind'
 
 
 # ─── Editors ──────────────────────────────────────────────────────────────────
 
-command -v nvim >/dev/null && alias vim='nvim' vimdiff='nvim -d'
+alias vim='nvim'
+alias vimdiff='nvim -d'
 alias v='nvim'
 
+
 # ─── System ───────────────────────────────────────────────────────────────────
+
+alias c='clear'
+alias q='exit'
 
 alias update='sudo apt update && sudo apt upgrade'
 alias install='sudo apt install'
