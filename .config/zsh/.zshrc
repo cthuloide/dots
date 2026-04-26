@@ -125,13 +125,6 @@ ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 source "$ZDOTDIR/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source "$ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
-# history substring search bindings — must follow plugin source
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
-bindkey -M vicmd 'k' history-substring-search-up
-bindkey -M vicmd 'j' history-substring-search-down
-
-
 # ─── Prompt ───────────────────────────────────────────────────────────────────
 
 eval "$(starship init zsh)"
