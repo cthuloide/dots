@@ -1,6 +1,4 @@
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
-require("config.options")
-require("config.keymaps")
-require("config.plugins")
+require("cthuloide.options")
+require("cthuloide.keymaps")
+require("cthuloide.lazy")
+require("cthuloide.autocmds")
