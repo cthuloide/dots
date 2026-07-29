@@ -1,0 +1,40 @@
+(
+  name: "Amber CRT",
+  foreground: "#FFB347",
+  cursor: "#FFC766",
+  bright_foreground: "#FFD98A",
+  dim_foreground: "#8C6A2A",
+
+  normal: (
+    black: "#11100D",
+    red: "#A86A1C",
+    green: "#B07A22",
+    yellow: "#FFB347",
+    blue: "#8F6A2A",
+    magenta: "#C48A2E",
+    cyan: "#D39B38",
+    white: "#FFB347",
+  ),
+
+  bright: (
+    black: "#3A2A15",
+    red: "#C8872C",
+    green: "#D39433",
+    yellow: "#FFD98A",
+    blue: "#B3873B",
+    magenta: "#E0A547",
+    cyan: "#F0B857",
+    white: "#FFF1C7",
+  ),
+
+  dim: (
+    black: "#0A0907",
+    red: "#704814",
+    green: "#775018",
+    yellow: "#A8792D",
+    blue: "#5D461A",
+    magenta: "#856120",
+    cyan: "#977028",
+    white: "#8C6A2A",
+  ),
+)

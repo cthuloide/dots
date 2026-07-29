@@ -1,0 +1,225 @@
+(
+    palette: Dark((
+        name: "amber-crt",
+
+        // Status colors
+        bright_red: (
+            red: 0.78,
+            green: 0.46,
+            blue: 0.22,
+            alpha: 1.0,
+        ),
+        bright_green: (
+            red: 0.82,
+            green: 0.64,
+            blue: 0.25,
+            alpha: 1.0,
+        ),
+        bright_orange: (
+            red: 1.00,
+            green: 0.78,
+            blue: 0.40,
+            alpha: 1.0,
+        ),
+
+        // Warm charcoal instead of gray
+        gray_1: (
+            red: 0.07,
+            green: 0.06,
+            blue: 0.05,
+            alpha: 1.0,
+        ),
+        gray_2: (
+            red: 0.10,
+            green: 0.09,
+            blue: 0.07,
+            alpha: 1.0,
+        ),
+
+        neutral_0: (red: 0.00, green: 0.00, blue: 0.00, alpha: 1.0),
+        neutral_1: (red: 0.03, green: 0.02, blue: 0.02, alpha: 1.0),
+        neutral_2: (red: 0.05, green: 0.04, blue: 0.03, alpha: 1.0),
+        neutral_3: (red: 0.09, green: 0.08, blue: 0.06, alpha: 1.0),
+        neutral_4: (red: 0.14, green: 0.12, blue: 0.09, alpha: 1.0),
+        neutral_5: (red: 0.22, green: 0.18, blue: 0.13, alpha: 1.0),
+        neutral_6: (red: 0.34, green: 0.28, blue: 0.20, alpha: 1.0),
+        neutral_7: (red: 0.50, green: 0.41, blue: 0.29, alpha: 1.0),
+        neutral_8: (red: 0.69, green: 0.57, blue: 0.41, alpha: 1.0),
+        neutral_9: (red: 0.87, green: 0.75, blue: 0.58, alpha: 1.0),
+        neutral_10:(red: 1.00, green: 0.95, blue: 0.82, alpha: 1.0),
+
+        // Primary amber phosphor
+        accent_blue: (
+            red: 1.00,
+            green: 0.70,
+            blue: 0.28,
+            alpha: 1.0,
+        ),
+
+        accent_indigo: (
+            red: 0.92,
+            green: 0.67,
+            blue: 0.33,
+            alpha: 1.0,
+        ),
+        accent_purple: (
+            red: 0.84,
+            green: 0.60,
+            blue: 0.28,
+            alpha: 1.0,
+        ),
+        accent_pink: (
+            red: 0.88,
+            green: 0.63,
+            blue: 0.32,
+            alpha: 1.0,
+        ),
+        accent_red: (
+            red: 0.76,
+            green: 0.43,
+            blue: 0.20,
+            alpha: 1.0,
+        ),
+        accent_orange: (
+            red: 1.00,
+            green: 0.70,
+            blue: 0.28,
+            alpha: 1.0,
+        ),
+        accent_yellow: (
+            red: 1.00,
+            green: 0.85,
+            blue: 0.54,
+            alpha: 1.0,
+        ),
+        accent_green: (
+            red: 0.82,
+            green: 0.64,
+            blue: 0.25,
+            alpha: 1.0,
+        ),
+
+        accent_warm_grey: (
+            red: 0.58,
+            green: 0.49,
+            blue: 0.38,
+            alpha: 1.0,
+        ),
+        ext_warm_grey: (
+            red: 0.40,
+            green: 0.33,
+            blue: 0.26,
+            alpha: 1.0,
+        ),
+
+        ext_orange: (
+            red: 1.00,
+            green: 0.74,
+            blue: 0.36,
+            alpha: 1.0,
+        ),
+        ext_yellow: (
+            red: 1.00,
+            green: 0.88,
+            blue: 0.58,
+            alpha: 1.0,
+        ),
+        ext_blue: (
+            red: 0.80,
+            green: 0.56,
+            blue: 0.26,
+            alpha: 1.0,
+        ),
+        ext_purple: (
+            red: 0.82,
+            green: 0.58,
+            blue: 0.30,
+            alpha: 1.0,
+        ),
+        ext_pink: (
+            red: 0.88,
+            green: 0.64,
+            blue: 0.34,
+            alpha: 1.0,
+        ),
+        ext_indigo: (
+            red: 0.67,
+            green: 0.46,
+            blue: 0.20,
+            alpha: 1.0,
+        ),
+    )),
+
+    spacing: (
+        space_none: 0,
+        space_xxxs: 4,
+        space_xxs: 8,
+        space_xs: 12,
+        space_s: 16,
+        space_m: 24,
+        space_l: 32,
+        space_xl: 48,
+        space_xxl: 64,
+        space_xxxl: 128,
+    ),
+
+    corner_radii: (
+        radius_0: (0.0, 0.0, 0.0, 0.0),
+        radius_xs: (2.0, 2.0, 2.0, 2.0),
+        radius_s: (8.0, 8.0, 8.0, 8.0),
+        radius_m: (8.0, 8.0, 8.0, 8.0),
+        radius_l: (8.0, 8.0, 8.0, 8.0),
+        radius_xl: (8.0, 8.0, 8.0, 8.0),
+    ),
+
+    neutral_tint: Some((
+        red: 0.34,
+        green: 0.28,
+        blue: 0.20,
+    )),
+
+    bg_color: Some((
+        red: 0.05,
+        green: 0.04,
+        blue: 0.03,
+        alpha: 1.0,
+    )),
+
+    primary_container_bg: None,
+    secondary_container_bg: None,
+
+    text_tint: Some((
+        red: 1.00,
+        green: 0.82,
+        blue: 0.55,
+    )),
+
+    accent: Some((
+        red: 1.00,
+        green: 0.70,
+        blue: 0.28,
+    )),
+
+    success: Some((
+        red: 0.82,
+        green: 0.64,
+        blue: 0.25,
+    )),
+
+    warning: Some((
+        red: 1.00,
+        green: 0.82,
+        blue: 0.45,
+    )),
+
+    destructive: Some((
+        red: 0.74,
+        green: 0.32,
+        blue: 0.22,
+    )),
+
+    is_frosted: false,
+    gaps: (0, 8),
+    active_hint: 3,
+    window_hint: None,
+)
