@@ -1,0 +1,93 @@
+# Matrix-inspired Starship Configuration (ANSI Terminal Colors)
+
+format = """
+$line_break\
+[┌──](bold green)\
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_status\
+$python\
+$rust\
+$golang\
+$nodejs\
+$cmd_duration\
+$line_break\
+[└──](bold green)\
+$character"""
+
+# Don't add a newline before the prompt
+add_newline = false
+
+# --- USERNAME & HOSTNAME ---
+[username]
+show_always = true
+style_user = "bold black bg:green"
+style_root = "bold white bg:red"
+format = "[ $user]($style)"
+
+[hostname]
+ssh_only = false
+style = "bold black bg:green"
+format = "[@$hostname ]($style)"
+
+# --- DIRECTORY ---
+[directory]
+style = "bold green"
+format = "[│](bold green)[ ⚡ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+# --- GIT ---
+[git_branch]
+symbol = "❯ "
+style = "bold green"
+format = "[│](bold green)[ $symbol$branch ]($style)"
+
+[git_status]
+style = "bold green"
+format = "[($all_status$ahead_behind )]($style)"
+conflicted = "⌕"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕"
+untracked = "?"
+stashed = "$"
+modified = "!"
+staged = "+"
+renamed = "»"
+deleted = "✘"
+
+# --- LANGUAGES / ENV ---
+[python]
+symbol = "[PY] "
+style = "dim green"
+format = "[│](bold green)[ $symbol$version ]($style)"
+
+[rust]
+symbol = "[RS] "
+style = "dim green"
+format = "[│](bold green)[ $symbol$version ]($style)"
+
+[golang]
+symbol = "[GO] "
+style = "dim green"
+format = "[│](bold green)[ $symbol$version ]($style)"
+
+[nodejs]
+symbol = "[JS] "
+style = "dim green"
+format = "[│](bold green)[ $symbol$version ]($style)"
+
+# --- EXECUTION TIME ---
+[cmd_duration]
+min_time = 2000
+style = "italic green"
+format = "[│](bold green)[ ⏱ $duration ]($style)"
+
+# --- PROMPT CHARACTER ---
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+vimcmd_symbol = "[❮](bold green)"
