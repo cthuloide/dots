@@ -1,0 +1,41 @@
+(
+  name: "Green CRT",
+
+  foreground: "#6CFF6C",
+  cursor: "#98FF98",
+  bright_foreground: "#C8FFD2",
+  dim_foreground: "#3D8C4F",
+
+  normal: (
+    black: "#0A0D0A",
+    red: "#3F8F4D",
+    green: "#4DB85F",
+    yellow: "#6CFF6C",
+    blue: "#347A45",
+    magenta: "#56A56A",
+    cyan: "#69C97E",
+    white: "#6CFF6C",
+  ),
+
+  bright: (
+    black: "#203020",
+    red: "#5BBF6A",
+    green: "#74E784",
+    yellow: "#98FF98",
+    blue: "#5CC56F",
+    magenta: "#7FE091",
+    cyan: "#9AF5A7",
+    white: "#E8FFF0",
+  ),
+
+  dim: (
+    black: "#050705",
+    red: "#285B34",
+    green: "#2F6E40",
+    yellow: "#3D8C4F",
+    blue: "#224F2F",
+    magenta: "#356640",
+    cyan: "#417A50",
+    white: "#3D8C4F",
+  ),
+)

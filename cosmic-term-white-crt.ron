@@ -1,0 +1,41 @@
+(
+  name: "White CRT",
+
+  foreground: "#E6E8EA",
+  cursor: "#FFFFFF",
+  bright_foreground: "#FFFFFF",
+  dim_foreground: "#9A9EA2",
+
+  normal: (
+    black: "#0C0C0C",
+    red: "#707478",
+    green: "#8A8E92",
+    yellow: "#E6E8EA",
+    blue: "#62666A",
+    magenta: "#909498",
+    cyan: "#B1B5B8",
+    white: "#E6E8EA",
+  ),
+
+  bright: (
+    black: "#2A2A2A",
+    red: "#9A9EA2",
+    green: "#B7BBBF",
+    yellow: "#FFFFFF",
+    blue: "#A4A8AC",
+    magenta: "#C8CCCF",
+    cyan: "#E0E3E5",
+    white: "#FFFFFF",
+  ),
+
+  dim: (
+    black: "#050505",
+    red: "#505356",
+    green: "#5F6366",
+    yellow: "#9A9EA2",
+    blue: "#474A4D",
+    magenta: "#666A6D",
+    cyan: "#7B7F82",
+    white: "#9A9EA2",
+  ),
+)
